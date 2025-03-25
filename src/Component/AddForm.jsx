@@ -43,7 +43,7 @@ function AddProductForm({ onSave, onClose  }) {
                 <textarea
                     name="description"
                     value={product.description || ""}
-                    onChange={handleChange}
+                    onChange={handleChange} //goi action
                     placeholder="Description"
                 />
                 <input

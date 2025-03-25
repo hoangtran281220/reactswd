@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './App.css'
-import ProductContainer from "./ProductContainer.jsx";
+import ProductContainer from "./Component/ProductContainer.jsx";
 
 
 function App() {

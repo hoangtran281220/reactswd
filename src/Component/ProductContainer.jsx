@@ -10,7 +10,7 @@ function ProductContainer() {
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
-        fetchProducts();
+        fetchProducts(); //
     }, []);
 
     const fetchProducts = async () => {
