@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 
 // eslint-disable-next-line react/prop-types
 function ProductList({ products, onEdit, onDelete }) {
@@ -11,16 +11,21 @@ function ProductList({ products, onEdit, onDelete }) {
             <tr style={{ backgroundColor: '#f2f2f2', borderBottom: '1px solid #ddd' }}>
                 <th style={{ border: '1px solid #ddd', padding: '8px' }}>Name</th>
                 <th style={{ border: '1px solid #ddd', padding: '8px' }}>Price</th>
+                <th style={{ border: '1px solid #ddd', padding: '8px' }}>Category</th>
+                <th style={{ border: '1px solid #ddd', padding: '8px' }}>Brand</th>
                 <th style={{ border: '1px solid #ddd', padding: '8px' }}>Quantity</th>
                 <th style={{ border: '1px solid #ddd', padding: '8px' }}>Description</th>
                 <th style={{ border: '1px solid #ddd', padding: '8px' }}>Actions</th>
             </tr>
             </thead>
             <tbody>
+            {/* eslint-disable-next-line react/prop-types */}
             {products.map(product => (
                 <tr key={product.productId} style={{ borderBottom: '1px solid #ddd' }}>
                     <td style={{ border: '1px solid #ddd', padding: '8px' }}>{product.name}</td>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{product.price}</td>
+                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>${product.price.toFixed(2)}</td>
+                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{product.categoryName}</td>
+                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{product.brandName}</td>
                     <td style={{ border: '1px solid #ddd', padding: '8px' }}>{product.stockQuantity}</td>
                     <td style={{ border: '1px solid #ddd', padding: '8px' }}>{product.description}</td>
                     <td style={{ border: '1px solid #ddd', padding: '8px' }}>
